@@ -1,0 +1,4 @@
+import random
+siyahi_olcusu = 10
+siyahi = [random.randint(0, 27) for _ in range(siyahi_olcusu)]
+print(siyahi)
