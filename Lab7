@@ -1,0 +1,22 @@
+import random
+n = 10  # Massivin ölçüsü
+A = [random.randint(1, 100) for _ in range(n)]
+with open("original_massiv.txt", "w") as f:
+    for num in A:
+        f.write(f"{num}\n")
+print("Massiv fayla yazıldı (original_massiv.txt):")
+print(A)
+
+with open("original_massiv.txt", "r") as f:
+    lines = f.readlines()
+    son_3_ədəd = [int(lines[-3].strip()), int(lines[-2].strip()), int(lines[-1].strip())]
+
+with open("son_3_ədəd.txt", "w") as f:
+    for num in son_3_ədəd:
+        f.write(f"{num}\n")
+
+cəmi = sum(son_3_ədəd)
+
+print("\nSon üç ədəd yeni fayla yazıldı (son_3_ədəd.txt):")
+print(son_3_ədəd)
+print(f"Son üç ədədin cəmi: {cəmi}")
