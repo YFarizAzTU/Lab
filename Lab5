@@ -1,0 +1,21 @@
+import random
+n = 15  # Siyahının ölçüsü (n sayda element)
+interval = (-3, 10)  # [-3; 10] intervalı
+siyahi = [random.randint(interval[0], interval[1]) for _ in range(n)]
+print("Siyahi:", siyahi)
+ilk_menfi_index = -1
+for i in range(len(siyahi)):
+    if siyahi[i] < 0:
+        ilk_menfi_index = i
+        break
+
+if ilk_menfi_index != -1:
+    əvvəlki_elementlər = siyahi[:ilk_menfi_index]
+
+    if len(əvvəlki_elementlər) > 0:
+        ortalama = sum(əvvəlki_elementlər) / len(əvvəlki_elementlər)
+        print("İlk mənfi elementdən əvvəlki elementlərin ədədi ortası:", ortalama)
+    else:
+        print("İlk mənfi elementdən əvvəlki elementlər yoxdur.")
+else:
+    print("Siyahıda mənfi element yoxdur.")
