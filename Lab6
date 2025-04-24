@@ -1,0 +1,17 @@
+import random
+n = 4  # Sətirlərin sayı
+m = 3  # Sütunların sayı
+A = [[random.randint(1, 10) for _ in range(m)] for _ in range(n)]
+print("A massivinin göstərilməsi:")
+for row in A:
+    print(row)
+hasil = []
+for j in range(m):
+    sütun_hasil = 1
+    for i in range(n):
+        sütun_hasil *= A[i][j]  
+    hasil.append(sütun_hasil)
+
+print("\nHər bir sütunun hasilinin nəticələri:")
+for i in range(m):
+    print(f"Sütun {i+1} hasil: {hasil[i]}")
