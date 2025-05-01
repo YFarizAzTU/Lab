@@ -1,0 +1,10 @@
+import math
+
+def f(x): return math.exp(x)
+math.log(x) - 20
+def_(X): return math.exp(x) - 1/x
+
+x=3.1
+for_in range(10):
+  x = x - f(x)/f_(x)
+print(f"Teqribi kok: {x}")
